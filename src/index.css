@@ -46,12 +46,58 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+/* button:hover {
+  border-color: #0d0c0c;
+} */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+input {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.list {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
 
 @media (prefers-color-scheme: light) {
@@ -60,9 +106,69 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #eb1b10;
   }
   button {
     background-color: #f9f9f9;
   }
+}
+
+.loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+.header {
+  padding-bottom: 20px;
+}
+.home-title {
+  text-align: center;
+  color: #545454;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.hot {
+  color: #fe891c;
+}
+
+.hot:hover {
+  animation-name: blured;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+@keyframes blured {
+  0% {
+    filter: blur(0);
+    color: #fe891c;
+  }
+  25% {
+    filter: blur(3px);
+    color: #f7be88;
+  }
+  50% {
+    filter: blur(0);
+    color: #fe891c;
+  }
+  75% {
+    filter: blur(3px);
+    color: #f7be88;
+  }
+  100% {
+    filter: blur(0);
+    color: #fe891c;
+  }
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #525252;
+}
+
+.active {
+  color: #fe891c;
 }
